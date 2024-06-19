@@ -1,0 +1,34 @@
+
+.NavBar{
+    background-color:  #088f8f;
+    position: relative;
+    padding: 50;
+
+    
+
+}
+.brand{
+    position: absolute;
+    top:0;
+    left: 90;
+    color:white;
+    
+}
+.logo{
+    position:absolute;
+    left: 0;
+    top:0;
+}
+.Nav-Link{
+        position: absolute;
+        left:0;
+        float:left;
+        bottom: 0;
+}
+.content{
+    background-color:  #088f8f;
+    padding: 200px;
+}
+.scrollarea{
+    min-height: 600px;
+}
