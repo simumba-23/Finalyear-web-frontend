@@ -1,38 +1,396 @@
-.App {
+.custom-card-shadow {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.chat-back-color{
+  background-color: rgba(42, 139, 184, 0.267);
+}
+.scroll-offcanvas{
+  overflow-y: auto;
+  max-height:80vh;
+
+}
+/* General styles */
+body {
+  background-color: #f8f9fa;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Navbar styles */
+.Nav-Container {
+  background-color: #2c3e50;
+  padding: 10px 0;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.Nav-Brand {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1.8rem;
+  transition: color 0.3s ease-in-out;
+}
+
+.Nav-Brand:hover {
+  color: #18bc9c;
+}
+
+.Nav-Linker .nav-link {
+  color: #ecf0f1;
+  margin-right: 20px;
+  font-size: 1.1rem;
+  transition: color 0.3s ease-in-out;
+}
+
+.Nav-Linker .nav-link:hover {
+  color: #18bc9c;
+}
+
+.search-icon {
+  margin-right: 5px;
+}
+
+.user-greeting {
+  color: #ffffff;
+  font-size: 1rem;
+  margin-left: 10px;
+}
+
+/* Offcanvas styles */
+.category-offcanvas {
+  background-color: #ecf0f1;
+  color: #2c3e50;
+}
+
+/* Profile and notification styles */
+.profile, .notification {
+  display: inline-block;
+  margin-right: 10px;
+  color: #ecf0f1;
+  transition: color 0.3s ease-in-out;
+}
+
+.profile:hover, .notification:hover {
+  color: #18bc9c;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.Nav-Container {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.Nav-Linker .nav-link {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.user-greeting {
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Chat container styles */
+.chat-container {
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  max-width: 800px;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+/* Message container styles */
+.messages {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+/* Individual message styles */
+.message {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.message-content {
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 70%;
+}
+
+/* Received messages */
+.received-message {
+  align-items: flex-start;
+}
+
+.received-message .message-content {
+  background-color: #e9ecef;
+  align-self: flex-start;
+}
+
+/* Sent messages */
+.sent-message {
+  align-items: flex-end;
+}
+
+.sent-message .message-content {
+  background-color: #d1e7dd;
+  align-self: flex-end;
+}
+
+/* Input group styles */
+.input-group {
+  display: flex;
+}
+
+.input-group .form-control {
+  border-radius: 0;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.input-group .btn {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.customCard {
+  background-color: #f8f9fa;
+  border-radius: 10px;
+}
+
+.customCard .card-header {
+  background-color: #007bff;
+  color: white;
+  border-radius: 10px 10px 0 0;
+}
+
+.customCard .form-group {
+  margin-bottom: 1rem;
+}
+
+.customCard .btn-primary {
+  background-color: #007bff;
+  border: none;
+}
+
+.customCard .btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* post modal */
+.custom-card-shadow {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.custom-card-shadow .card-header {
+  background-color: #007bff;
+  color: white;
+  border-radius: 10px 10px 0 0;
+}
+
+.custom-card-shadow .form-group {
+  margin-bottom: 1rem;
+}
+
+.custom-card-shadow .btn-primary {
+  background-color: #007bff;
+  border: none;
+}
+
+.custom-card-shadow .btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* category offcanvas  */
+.category-nav .category-link {
+  font-size: 1.1rem;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.category-nav .category-link:hover {
+  background-color: #f8f9fa;
+}
+
+.tool-card {
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+
+.tool-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.tool-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.tool-price {
+  font-size: 1.1rem;
+  color: #28a745;
+}
+
+.tool-rating {
+  display: flex;
+  align-items: center;
+}
+
+.tool-status.available {
+  color: #28a745;
+}
+
+.tool-status.unavailable {
+  color: #dc3545;
+}
+
+.scroll-offcanvas {
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+/* home page tools listing  */
+.custom-card-shadow {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+
+.custom-card-shadow:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.status-badge {
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.status-badge.available {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.status-badge.unavailable {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.status-badge.pending {
+  background-color: #ffc107;
+  color: #fff;
+}
+
+/* my tool  */
+.custom-card-shadow {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+
+.custom-card-shadow:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.cardBody {
+  padding: 15px;
+}
+
+.status-badge {
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.status-badge.available {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.status-badge.unavailable {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.status-badge.pending {
+  background-color: #ffc107;
+  color: #fff;
+}
+
+/* owner info */
+.custom-card-shadow {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.custom-card-shadow:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.me-3 {
+  margin-right: 1rem;
+}
+
+/* user info */
+/* UserInfo.css */
+.container-custom {
+  padding: 20px;
+}
+
+.header-custom {
+  padding: 10px;
+  margin-top: 20px;
+  color: #fff;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header-personal {
+  background-color: #007bff; /* Primary */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header-contact {
+  background-color: #6c757d; /* Secondary */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.header-payment {
+  background-color: #28a745; /* Success */
 }
 
-.App-link {
-  color: #248aa7;
+.table-custom {
+  margin-bottom: 30px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.table-custom th,
+.table-custom td {
+  vertical-align: middle;
+}
+
+.btn-outline-primary {
+  margin-right: 5px;
+}
+
+.btn-outline-danger {
+  margin-left: 5px;
+}
+
+.modal-title-custom {
+  text-align: center;
+  width: 100%;
 }

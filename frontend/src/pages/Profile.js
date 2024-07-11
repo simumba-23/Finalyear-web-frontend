@@ -29,6 +29,8 @@ const {user,logoutUser} = useContext(AuthContext)
             height='20px'
             />
     </Link>
+    PROFILES
+
   {isProfileOpen && (
      <Card style={{ position: 'absolute', top: '50px', width:'200px', zIndex: 2 }} >
         <Card.Header >

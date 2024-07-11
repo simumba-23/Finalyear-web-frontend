@@ -1,17 +1,16 @@
-
 .NavBar{
     background-color:  #088f8f;
     position: relative;
     padding: 50;
-
-    
-
+ display: flex;
 }
 .brand{
     position: absolute;
     top:0;
     left: 90;
     color:white;
+ display: flex;
+
     
 }
 .logo{
@@ -32,3 +31,65 @@
 .scrollarea{
     min-height: 600px;
 }
+
+.category{
+    margin-top: 150;
+}
+/* Search container styles */
+.search-container {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+  }
+  
+  /* Search bar styles */
+  .search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .search-bar .form-control {
+    border-radius: 0;
+  }
+  
+  .search-bar .btn {
+    border-radius: 0;
+  }
+  
+  /* Card styles */
+  .card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card img {
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .card-text {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  @media (max-width: 768px) {
+    .search-bar .form-control {
+      width: 100%;
+    }
+  
+    .search-bar .btn {
+      width: 100%;
+      margin-top: 10px;
+    }
+  }
+ 

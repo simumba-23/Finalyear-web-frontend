@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Nav } from 'react-bootstrap'
 import axios from 'axios';
+import '../App.css'
 
 
 function CategoryLists() {

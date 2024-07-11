@@ -76,7 +76,7 @@ function ReviewRating({tooldetail}) {
         value={formData.content}
         onChange={handlechange}
         />
-        <Button className='bg-secondary mt-2' type='submit'>submit</Button>
+        <Button className='bg-secondary mt-2' type='submit' disabled={!formData.content}>submit</Button>
         </Form.Group>
         </Form>
     </div>
